@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/wheel3.xml" value="0.28177083333333336" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_losing.xml" value="0.21014492753623187" />
+        <entry key="app/src/main/res/layout/fragment_mainscreen.xml" value="0.21014492753623187" />
+        <entry key="app/src/main/res/layout/fragment_startscreen.xml" value="0.21014492753623187" />
         <entry key="app/src/main/res/layout/fragment_winning.xml" value="0.21014492753623187" />
       </map>
     </option>

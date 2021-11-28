@@ -5,13 +5,18 @@ import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
 
-    ImageView luckyWheel;
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        luckyWheel = findViewById<R.id.wheel>();
+        val startscreenFragment =
+        val mainscreenFragmentFragment = MainscreenFragment()
+
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.mainscreenFragment, fra)
+        }
+
+
 
     }
 }
