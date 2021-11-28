@@ -18,7 +18,6 @@ class FourthFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_fourth, container, false)
 
         view.Btn4.setOnClickListener{ Navigation.findNavController(view).navigate(R.id.navigateToSecondFragment)}
-
         return view
 
     }
