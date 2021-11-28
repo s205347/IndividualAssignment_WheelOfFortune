@@ -4,20 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_700"
-    tools:context=".SecondFragment">
-
+    android:background="@color/teal_200"
+    tools:context=".ThirdFragment">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/texView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Wheel of fortune"
-        android:textColor="#fff"
+        android:text="Unfortunately you lost :("
+        android:textColor="@color/black"
         android:textSize="30dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="56dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="273dp" />
+
+    <Button
+        android:id="@+id/Btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play again"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="377dp"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

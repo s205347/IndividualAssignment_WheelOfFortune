@@ -10,28 +10,30 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="329dp"
+        android:layout_height="66dp"
         android:layout_marginStart="172dp"
         android:layout_marginTop="357dp"
         android:layout_marginEnd="180dp"
         android:layout_marginBottom="355dp"
-        android:text="1"
+        android:text="Welcome, click the button below when ready to play"
         android:textColor="#fff"
-        android:textSize="100dp"
+        android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/Btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go to 2 fragment"
+        android:text="Start the game"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="456dp" />
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="405dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
