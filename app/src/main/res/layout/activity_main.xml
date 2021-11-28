@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,32 +8,20 @@
     tools:context=".MainActivity"
     android:padding="10dp">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/startscreenFragment"/>
+  <androidx.fragment.app.FragmentContainerView
+      android:id="@+id/fragmentContainerView2"
+      android:name="androidx.navigation.fragment.NavHostFragment"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:defaultNavHost="true"
+      app:navGraph="@navigation/my_nav"
+      android:layout_marginStart="1dp"
+      android:layout_marginTop="1dp"
+      android:layout_marginEnd="1dp"
+      android:layout_marginBottom="1dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/startscreenFragmentBtn"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="25dp"
-        android:text="Start the game" />
-
-    <fragment
-        android:name="com.example.individualassignment_wheeloffortune.MainscreenFragment"
-        android:id="@+id/fragment"
-        android:layout_width="402dp"
-        android:layout_height="722dp"/>
-
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/flFragment"/>
-
-
-
-  </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
