@@ -12,12 +12,14 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:text="Wheel of fortune"
         android:textColor="#fff"
         android:textSize="30dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
