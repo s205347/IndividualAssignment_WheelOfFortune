@@ -6,11 +6,18 @@ import android.os.Bundle
 class MainActivity : AppCompatActivity() {
 
     var score = 0
-
+    val lives = 5
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        if (lives > 0) {
+
+        }
+
+        else {
+        }
 
 //        var hemmeligSætning: String = "wheel of fortune "
 //        Scanner scan
