@@ -22,10 +22,10 @@
             android:id="@+id/navigateToFirstFragment"
             app:destination="@id/firstFragment" />
         <action
-            android:id="@+id/action_secondFragment_to_thirdFragment"
+            android:id="@+id/navigateToThirdFragment"
             app:destination="@id/thirdFragment" />
         <action
-            android:id="@+id/action_secondFragment_to_fourthFragment"
+            android:id="@+id/navigateToFourthFragment"
             app:destination="@id/fourthFragment" />
     </fragment>
     <fragment
