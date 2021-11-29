@@ -6,40 +6,31 @@ import android.os.Bundle
 class MainActivity : AppCompatActivity() {
 
     var score = 0
-    val lives = 5
+    val lives = 6
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        if (lives > 0) {
-
-        }
-
-        else {
-        }
-
-//        var hemmeligSætning: String = "wheel of fortune "
-//        Scanner scan
-//        scan = new Scanner(System.in)
-//        var spillerGæt: String = " "
-//        var ikkeFærdig = true
+//        val hemmeligSætning = "wheel of fortune "
+//        val scan: Scanner
+//        scan = Scanner(System.`in`)
+//        var spillerGæt = " "
 //
-//        while (score !=-1) {
-//            ikkeFærdig = false;
-//            for(char hemmeligtBogstav : hemmeligSætning.toCharArray()) {
+//        while (lives > 0) {
+//            for (hemmeligtBogstav in hemmeligSætning.toCharArray()) {
 //                if (spillerGæt.indexOf(hemmeligtBogstav) == -1) {
-//                    System.out.print("*");
-//                    ikkeFærdig = true;
+//                    print("*")
+//                    lives-1
 //                } else {
-//                    System.out.print(hemmeligtBogstav);
+//                    print(hemmeligtBogstav)
 //                }
-//
 //            }
-//            System.out.println("\nIndtast venligt det bogstav du gætter på");
-//            val bogstav = scan.next();
-//            spillerGæt += bogstav;
+//            println("\nIndtast venligt det bogstav du gætter på")
+//            val bogstav = scan.next()
+//            spillerGæt += bogstav
 //        }
+//        println("Tillykke du er færdig og har vundet spillet! ;)")
     }
 
 
