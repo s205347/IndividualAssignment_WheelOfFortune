@@ -1,7 +1,7 @@
 package com.example.individualassignment_wheeloffortune
 
-class Sentences {
-    val secretSentences = listOf<String>(
+object Sentences {
+    val secretSentence = listOf<String>(
         "Game/of/Thrones",
         "Breaking/Bad",
         "Orange/is/the/new/black",
