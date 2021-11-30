@@ -19,7 +19,7 @@ class ThirdFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_third, container, false)
 
         view.Btn3.setOnClickListener{
-            startNewGame}
+            startGame}
 
 
         return view
