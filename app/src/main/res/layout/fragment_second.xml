@@ -28,7 +28,7 @@
         android:layout_height="35dp"
         android:layout_marginTop="28dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/pointerIcon1"
+        android:src="@drawable/pointericon1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
