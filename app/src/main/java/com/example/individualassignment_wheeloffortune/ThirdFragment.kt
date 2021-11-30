@@ -18,7 +18,9 @@ class ThirdFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_third, container, false)
 
-        view.Btn3.setOnClickListener{ Navigation.findNavController(view).navigate(R.id.navigateToSecondFragment)}
+        view.Btn3.setOnClickListener{
+            startNewGame}
+
 
         return view
 

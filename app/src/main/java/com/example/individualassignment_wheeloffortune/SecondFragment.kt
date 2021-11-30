@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_first.view.*
 import kotlinx.android.synthetic.main.fragment_second.view.*
@@ -14,8 +16,14 @@ import java.util.*
 
 class SecondFragment : Fragment() {
 
-    var score = 0
-    val lives = 6
+//    var score = 0
+//    val lives = 6
+
+    private lateinit var wordTextView: TextView
+    private lateinit var lettersUsedTextView: TextView
+    private lateinit var imageView: ImageView
+    private lateinit var lettersLayout: ConstraintLayout
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
