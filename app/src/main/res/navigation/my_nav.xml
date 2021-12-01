@@ -21,29 +21,5 @@
         <action
             android:id="@+id/navigateToFirstFragment"
             app:destination="@id/firstFragment" />
-        <action
-            android:id="@+id/navigateToThirdFragment"
-            app:destination="@id/thirdFragment" />
-        <action
-            android:id="@+id/navigateToFourthFragment"
-            app:destination="@id/fourthFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/thirdFragment"
-        android:name="com.example.individualassignment_wheeloffortune.ThirdFragment"
-        android:label="fragment_third"
-        tools:layout="@layout/fragment_third" >
-        <action
-            android:id="@+id/action_thirdFragment_to_secondFragment"
-            app:destination="@id/secondFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/fourthFragment"
-        android:name="com.example.individualassignment_wheeloffortune.FourthFragment"
-        android:label="fragment_fourth"
-        tools:layout="@layout/fragment_fourth" >
-        <action
-            android:id="@+id/action_fourthFragment_to_secondFragment"
-            app:destination="@id/secondFragment" />
     </fragment>
 </navigation>
