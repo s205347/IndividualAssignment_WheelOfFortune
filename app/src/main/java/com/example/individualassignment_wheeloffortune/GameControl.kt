@@ -11,7 +11,7 @@ object GameControl {
     private var lettersAlreadyUsed: String = ""
     private lateinit var hiddenSentence: String
 
-    fun startGame(): GameCondition {
+    fun startNewGame(): GameCondition {
 //        lettersAlreadyUsed = ""
 //        tries = 0
         val randomIndex = Random.nextInt(0, Sentences.secretSentence.size)

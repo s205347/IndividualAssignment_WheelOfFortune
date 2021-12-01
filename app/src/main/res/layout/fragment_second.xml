@@ -26,7 +26,7 @@
         android:letterSpacing="0.3"
         android:textSize="20sp"
         android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@+id/Btn5"
+        app:layout_constraintTop_toBottomOf="@+id/startNewGameButton"
         android:text="_ _ ABCD_ _ _ _ _ _ _"
         />
 
@@ -42,6 +42,35 @@
         android:text="Used Letters: A, B, C, D, E, F, G"
         />
 
+    <TextView
+        android:id="@+id/gameLostTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You lost :("
+        android:textColor="#BB4444"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/wordTextView"
+        app:layout_constraintEnd_toEndOf="@id/wordTextView"
+        app:layout_constraintStart_toStartOf="@id/wordTextView"
+        app:layout_constraintTop_toTopOf="@id/wordTextView"
+        />
+
+    <TextView
+        android:id="@+id/gameWonTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You Won :)"
+        android:textColor="#44BB44"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/wordTextView"
+        app:layout_constraintEnd_toEndOf="@id/wordTextView"
+        app:layout_constraintStart_toStartOf="@id/wordTextView"
+        app:layout_constraintTop_toTopOf="@id/wordTextView"
+        />
 
     <ImageView
         android:id="@+id/imageView"
@@ -65,10 +94,10 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <Button
-        android:id="@+id/Btn5"
+        android:id="@+id/startNewGameButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Spin the wheel"
+        android:text="Start a new game"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
@@ -85,7 +114,7 @@
             android:layout_height="match_parent"
             android:padding="16dp"
             app:constraint_referenced_ids="a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z"
-            app:flow_wrapMode="aligned"
+            app:flow_wrapMode="chain"
             />
 
         <TextView
