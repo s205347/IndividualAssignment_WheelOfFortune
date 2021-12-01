@@ -21,13 +21,74 @@ import java.util.*
 
 class SecondFragment : Fragment() {
 
+    private val gameControl = GameControl
+    private lateinit var lettersLayout: ConstraintLayout
+    private lateinit var newGameButton: Button
+    private lateinit var imageView: ImageView
+    private lateinit var lettersUsedTextView: TextView
+    private lateinit var wordTextView: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_first, container, false)
+        imageView = imageView.findViewById(R.id.imageView)
+        wordTextView = imageView.findViewById(R.id.wordTextView)
+        lettersUsedTextView = imageView.findViewById(R.id.lettersUsedTextView)
+        lettersLayout = imageView.findViewById(R.id.lettersLayout)
 
-        return view
+        newGameButton.setOnClickListener {
+            startNewGame()
+
+        }
+        val gameState = gameControl.startNewGame()
+        updateUI(gameState)
+
+        lettersLayout.children.forEach { letterView ->
+            if (letterView is TextView) {
+                letterView.setOnClickListener {
+                    val gameState = gameControl.play((letterView).text[0])
+                    updateUI(gameState)
+                    letterView.visibility = View.GONE
+                }
+            }
+        }
+        return inflater.inflate(R.layout.fragment_second, container, false)
+    }
+
+
+    private fun updateUI(gameCondition: GameCondition) {
+        when (gameCondition) {
+            is GameCondition.Lost -> showGameLost(gameCondition.sentenceReveal)
+            is GameCondition.Undergoing -> {
+                wordTextView.text = gameCondition.secretSentence
+                lettersUsedTextView.text = "Letters used: ${gameCondition.lettersAlreadyUsed}"
+            }
+            is GameCondition.Won -> showGameWon(gameCondition.sentenceReveal)
+        }
+    }
+
+    private fun showGameLost(wordToGuess: String) {
+        wordTextView.text = wordToGuess
+        gameLostTextView.visibility = View.VISIBLE
+        lettersLayout.visibility = View.GONE
+    }
+
+    private fun showGameWon(wordToGuess: String) {
+        wordTextView.text = wordToGuess
+        gameWonTextView.visibility = View.VISIBLE
+        lettersLayout.visibility = View.GONE
+    }
+
+    private fun startNewGame() {
+        gameLostTextView.visibility = View.GONE
+        gameWonTextView.visibility = View.GONE
+        val gameCondition = gameControl.startNewGame()
+        lettersLayout.visibility = View.VISIBLE
+        lettersLayout.children.forEach { letterView ->
+            letterView.visibility = View.VISIBLE
+        }
+        updateUI(gameCondition)
     }
 }
+
