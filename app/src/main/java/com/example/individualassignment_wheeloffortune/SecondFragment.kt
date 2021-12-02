@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.children
 import androidx.navigation.Navigation
+import com.example.individualassignment_wheeloffortune.databinding.FragmentSecondBinding
 import kotlinx.android.synthetic.main.fragment_first.view.*
 import kotlinx.android.synthetic.main.fragment_second.*
 import kotlinx.android.synthetic.main.fragment_second.view.*
@@ -27,8 +28,34 @@ class SecondFragment : Fragment() {
     private lateinit var gameLostTextView: TextView
     private lateinit var gameWonTextView: TextView
 
+    private var _binding: FragmentSecondBinding? = null
+    private val binding get() = _binding!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        arguments?.let {
+
+        }
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentSecondBinding.inflate(inflater, container, false)
+        wordTextView = binding.wordTextView
+        lettersUsedTextView = binding.lettersUsedTextView
+        lettersLayout = binding.lettersLayout
+        newGameButton = binding.startNewGameButton
+        gameLostTextView = binding.gameLostTextView
+        gameWonTextView = binding.gameWonTextView
+
+        /*wordTextView = imageView.findViewById(R.id.wordTextView)
+        lettersUsedTextView = imageView.findViewById(R.id.lettersUsedTextView)
+        lettersLayout = imageView.findViewById(R.id.lettersLayout)
+        newGameButton = imageView.findViewById(R.id.startNewGameButton)
+        gameLostTextView = imageView.findViewById(R.id.gameLostTextView)
+        gameWonTextView = imageView.findViewById(R.id.gameWonTextView)*/
         newGameButton.setOnClickListener {
             startNewGame()
 
@@ -45,19 +72,8 @@ class SecondFragment : Fragment() {
                 }
             }
         }
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        wordTextView = imageView.findViewById(R.id.wordTextView)
-        lettersUsedTextView = imageView.findViewById(R.id.lettersUsedTextView)
-        lettersLayout = imageView.findViewById(R.id.lettersLayout)
-        newGameButton = imageView.findViewById(R.id.startNewGameButton)
-        gameLostTextView = imageView.findViewById(R.id.gameLostTextView)
-        gameWonTextView = imageView.findViewById(R.id.gameWonTextView)
-        return inflater.inflate(R.layout.fragment_second, container, false)
+        val view = binding.root
+        return view
     }
 
 
@@ -87,12 +103,12 @@ class SecondFragment : Fragment() {
     private fun startNewGame() {
         gameLostTextView.visibility = View.GONE
         gameWonTextView.visibility = View.GONE
-        val gameCondition = gameControl.startNewGame()
+        val gameState = gameControl.startNewGame()
         lettersLayout.visibility = View.VISIBLE
         lettersLayout.children.forEach { letterView ->
             letterView.visibility = View.VISIBLE
         }
-        updateUI(gameCondition)
+        updateUI(gameState)
     }
 }
 
