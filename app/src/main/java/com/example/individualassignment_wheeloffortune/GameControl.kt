@@ -12,8 +12,8 @@ object GameControl {
     private lateinit var hiddenSentence: String
 
     fun startNewGame(): GameCondition {
-//        lettersAlreadyUsed = ""
-//        tries = 0
+        lettersAlreadyUsed = ""
+        tries = 0
         val randomIndex = Random.nextInt(0, Sentences.secretSentence.size)
         guessTheWord = Sentences.secretSentence[randomIndex]
         createUnderscores(guessTheWord)
