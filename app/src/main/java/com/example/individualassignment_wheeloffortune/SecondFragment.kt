@@ -32,7 +32,7 @@ class SecondFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        imageView = imageView.findViewById(R.id.imageView)
+        /*imageView = imageView.findViewById(R.id.imageView)
         wordTextView = imageView.findViewById(R.id.wordTextView)
         lettersUsedTextView = imageView.findViewById(R.id.lettersUsedTextView)
         lettersLayout = imageView.findViewById(R.id.lettersLayout)
@@ -52,12 +52,12 @@ class SecondFragment : Fragment() {
                     letterView.visibility = View.GONE
                 }
             }
-        }
+        }*/
         return inflater.inflate(R.layout.fragment_second, container, false)
-    }
+    } }
 
 
-    private fun updateUI(gameCondition: GameCondition) {
+    /*private fun updateUI(gameCondition: GameCondition) {
         when (gameCondition) {
             is GameCondition.Lost -> showGameLost(gameCondition.sentenceReveal)
             is GameCondition.Undergoing -> {
@@ -90,5 +90,5 @@ class SecondFragment : Fragment() {
         }
         updateUI(gameCondition)
     }
-}
+}*/
 
