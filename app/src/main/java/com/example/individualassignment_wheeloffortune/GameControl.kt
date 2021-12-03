@@ -34,11 +34,7 @@ object GameControl {
 
 
     fun play(letter: Char): GameCondition {
-        if (lettersAlreadyUsed.contains(letter)) {
-            return GameCondition.Undergoing(lettersAlreadyUsed, hiddenSentence)
-        }
-
-        lettersAlreadyUsed += letter
+        lettersAlreadyUsed += "$letter"
         val indexes = mutableListOf<Int>()
 
         guessTheWord.forEachIndexed { index, char ->
@@ -57,7 +53,7 @@ object GameControl {
             tries++
         }
 
-        guessTheWord = finalUnderscoreWord
+        hiddenSentence = finalUnderscoreWord
         return getGameCondition()
     }
 
