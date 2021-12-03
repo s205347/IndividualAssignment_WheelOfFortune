@@ -5,7 +5,7 @@ import kotlin.text.StringBuilder
 
 object GameControl {
 
-    private val lives = 5
+    public val lives = 5
     private var tries = 0
     private lateinit var guessTheWord: String
     private var lettersAlreadyUsed: String = ""

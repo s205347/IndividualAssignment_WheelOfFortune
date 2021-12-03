@@ -69,6 +69,18 @@
         app:layout_constraintStart_toStartOf="@id/lettersLayout"
         app:layout_constraintTop_toTopOf="@id/lettersLayout" />
 
+
+    <TextView
+        android:id="@+id/livesView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="lives:"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/startNewGameButton" />
+
     <Button
         android:id="@+id/startNewGameButton"
         android:layout_width="wrap_content"

@@ -22,6 +22,7 @@ class SecondFragment : Fragment() {
     private lateinit var wordTextView: TextView
     private lateinit var gameLostTextView: TextView
     private lateinit var gameWonTextView: TextView
+    private lateinit var livesTextView: TextView
 
     private var _binding: FragmentSecondBinding? = null
     private val binding get() = _binding!!
@@ -44,6 +45,8 @@ class SecondFragment : Fragment() {
         newGameButton = binding.startNewGameButton
         gameLostTextView = binding.gameLostTextView
         gameWonTextView = binding.gameWonTextView
+        livesTextView = binding.livesView
+        livesTextView.text = "Lives: " + GameControl.lives
 
         newGameButton.setOnClickListener {
             startNewGame()
