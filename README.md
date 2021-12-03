@@ -1,0 +1,1 @@
+Her er et link til mit tilknyttet github-projekt: https://github.com/s205347/IndividualAssignment_WheelOfFortune.git
