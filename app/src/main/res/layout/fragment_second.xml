@@ -22,13 +22,13 @@
         android:id="@+id/wordTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="352dp"
         android:gravity="center"
         android:letterSpacing="0.3"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@+id/startNewGameButton"
         android:text="_ _ ABCD_ _ _ _ _ _ _"
-        />
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/lettersUsedTextView"
@@ -36,11 +36,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:textSize="18sp"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/wordTextView"
         android:text="Used Letters: A, B, C, D, E, F, G"
-        />
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/wordTextView" />
 
     <TextView
         android:id="@+id/gameLostTextView"
@@ -51,11 +50,10 @@
         android:textSize="35sp"
         android:textStyle="bold"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@id/wordTextView"
-        app:layout_constraintEnd_toEndOf="@id/wordTextView"
-        app:layout_constraintStart_toStartOf="@id/wordTextView"
-        app:layout_constraintTop_toTopOf="@id/wordTextView"
-        />
+        app:layout_constraintBottom_toBottomOf="@id/lettersLayout"
+        app:layout_constraintEnd_toEndOf="@id/lettersLayout"
+        app:layout_constraintStart_toStartOf="@id/lettersLayout"
+        app:layout_constraintTop_toTopOf="@id/lettersLayout" />
 
     <TextView
         android:id="@+id/gameWonTextView"
@@ -66,41 +64,20 @@
         android:textSize="35sp"
         android:textStyle="bold"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@id/wordTextView"
-        app:layout_constraintEnd_toEndOf="@id/wordTextView"
-        app:layout_constraintStart_toStartOf="@id/wordTextView"
-        app:layout_constraintTop_toTopOf="@id/wordTextView"
-        />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:adjustViewBounds="true"
-        android:src="@drawable/pointericon1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="292dp"
-        android:layout_height="181dp"
-        android:layout_marginTop="12dp"
-        android:src="@drawable/wheelicon7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintBottom_toBottomOf="@id/lettersLayout"
+        app:layout_constraintEnd_toEndOf="@id/lettersLayout"
+        app:layout_constraintStart_toStartOf="@id/lettersLayout"
+        app:layout_constraintTop_toTopOf="@id/lettersLayout" />
 
     <Button
         android:id="@+id/startNewGameButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
         android:text="Start a new game"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/lettersLayout"
@@ -114,8 +91,7 @@
             android:layout_height="match_parent"
             android:padding="16dp"
             app:constraint_referenced_ids="a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z"
-            app:flow_wrapMode="chain"
-            />
+            app:flow_wrapMode="chain" />
 
         <TextView
             android:id="@+id/a"
@@ -126,8 +102,7 @@
             android:text="A"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/b"
@@ -138,8 +113,7 @@
             android:text="B"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/c"
@@ -150,8 +124,7 @@
             android:text="C"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/d"
@@ -162,8 +135,7 @@
             android:text="D"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/e"
@@ -174,8 +146,7 @@
             android:text="E"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/f"
@@ -186,8 +157,7 @@
             android:text="F"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/g"
@@ -198,8 +168,7 @@
             android:text="G"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/h"
@@ -210,8 +179,7 @@
             android:text="H"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/i"
@@ -222,8 +190,7 @@
             android:text="I"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/j"
@@ -234,8 +201,7 @@
             android:text="J"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/k"
@@ -246,8 +212,7 @@
             android:text="K"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/l"
@@ -258,8 +223,7 @@
             android:text="L"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/m"
@@ -270,8 +234,7 @@
             android:text="M"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/n"
@@ -282,8 +245,7 @@
             android:text="N"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/o"
@@ -294,8 +256,7 @@
             android:text="O"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/p"
@@ -306,8 +267,7 @@
             android:text="P"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/q"
@@ -318,8 +278,7 @@
             android:text="Q"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/r"
@@ -330,8 +289,7 @@
             android:text="R"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/s"
@@ -342,8 +300,7 @@
             android:text="S"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/t"
@@ -354,8 +311,7 @@
             android:text="T"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/u"
@@ -366,8 +322,7 @@
             android:text="U"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/v"
@@ -378,8 +333,7 @@
             android:text="V"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/w"
@@ -390,8 +344,7 @@
             android:text="W"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/x"
@@ -402,8 +355,7 @@
             android:text="X"
             android:textColor="@color/white"
             android:textSize="20dp"
-            tools:ignore="MissingConstraints"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/y"
@@ -426,7 +378,6 @@
             android:textColor="@color/white"
             android:textSize="20dp"
             tools:ignore="MissingConstraints" />
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
