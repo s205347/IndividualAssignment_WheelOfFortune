@@ -2,6 +2,9 @@ package com.example.individualassignment_wheeloffortune
 
 import kotlin.random.Random
 import kotlin.text.StringBuilder
+/*
+Som inspiration til nogle af funktionerne i klassen er https://www.youtube.com/watch?v=kGGpH7ypxAU blevet brugt
+ */
 
 object GameControl {
 

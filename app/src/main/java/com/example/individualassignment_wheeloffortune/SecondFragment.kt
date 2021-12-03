@@ -11,7 +11,9 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.children
 import com.example.individualassignment_wheeloffortune.databinding.FragmentSecondBinding
-
+/*
+Som inspiration til nogle af funktionerne i klassen er https://www.youtube.com/watch?v=kGGpH7ypxAU blevet brugt
+ */
 
 class SecondFragment : Fragment() {
 
